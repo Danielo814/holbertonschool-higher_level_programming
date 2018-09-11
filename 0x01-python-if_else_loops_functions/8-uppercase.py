@@ -6,6 +6,4 @@ def uppercase(str):
             retval += chr(ord(str[i]) - 32)
         else:
             retval += chr(ord(str[i]))
-        if i == len(str) - 1:
-            retval += '\n'
-    print("{}".format(retval), end="")
+    print("{}".format(retval))
