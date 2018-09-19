@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
-import sys
 from calculator_1 import add, sub, mul, div
+import sys
 
 if __name__ == "__main__":
     if len(sys.argv) is not 4:
