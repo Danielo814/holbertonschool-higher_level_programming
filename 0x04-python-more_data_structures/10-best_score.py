@@ -9,4 +9,3 @@ def best_score(a_dictionary):
             temp = a_dictionary[k]
             empty = k
     return empty
-
