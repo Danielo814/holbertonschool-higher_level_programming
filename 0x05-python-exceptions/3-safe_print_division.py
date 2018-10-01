@@ -6,3 +6,4 @@ def safe_print_division(a, b):
         retval = None
     finally:
         print("Inside result: {}".format(retval))
+        return retval
