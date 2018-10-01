@@ -64,31 +64,6 @@ Holberton is not an integer
 guillaume@ubuntu:~/0x05$ 
 ```
 
-### guillaume@ubuntu:~/0x05$ cat 1-main.py
-#!/usr/bin/python3
-safe_print_integer = __import__('1-safe_print_integer').safe_print_integer
-
-value = 89
-has_been_print = safe_print_integer(value)
-if not has_been_print:
-    print("{} is not an integer".format(value))
-
-value = -89
-has_been_print = safe_print_integer(value)
-if not has_been_print:
-    print("{} is not an integer".format(value))
-
-value = "Holberton"
-has_been_print = safe_print_integer(value)
-if not has_been_print:
-    print("{} is not an integer".format(value))
-
-guillaume@ubuntu:~/0x05$ ./1-main.py
-89
--89
-Holberton is not an integer
-guillaume@ubuntu:~/0x05$ 
-
 ### Print and count integers 
 Write a function that prints the first x elements of a list and only integers.
 ```
