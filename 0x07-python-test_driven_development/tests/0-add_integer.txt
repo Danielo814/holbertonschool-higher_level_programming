@@ -1,0 +1,91 @@
+==============================
+tests for 0-add_integer module
+==============================
+
+
+Test for importing the function add_integer
+-------------------------------------------
+>>> add_integer = __import__('0-add_integer').add_integer
+
+
+Check addition of two positive numbers
+--------------------------------------
+>>> add_integer = __import__('0-add_integer').add_integer
+>>> add_integer(4, 5)
+9
+
+
+Check addition of two negative numbers
+--------------------------------------
+>>> add_integer(-4, -5)
+-9
+
+
+Check addition of a positive with a negative number
+--------------------------------------------------
+>>> add_integer(4, -5)
+-1
+
+
+Check addition of a negative with a positive number
+---------------------------------------------------
+>>> add_integer(-4, 5)
+1
+
+
+Check first input as a string
+-----------------------------
+>>> add_integer('h', 5)
+Traceback (most recent call last):
+ ...
+TypeError: a must be an integer
+
+
+check second input as a string
+-------------------------------
+>>> add_integer(5, 'c')
+Traceback (most recent call last):
+ ...
+TypeError: b must be an integer
+
+
+Check first input as a float
+----------------------------
+>>> add_integer(1.1, 9)
+10
+
+
+Check second input as a float
+-----------------------------
+>>> add_integer(7, 3.7)
+10
+
+
+Check first argument as a list
+------------------------------
+>>> add_integer([1], 3.7)
+Traceback (most recent call last):
+ ...
+TypeError: a must be an integer
+
+
+Check second argument as a dictionary
+-------------------------------------
+>>> add_integer(7, {"Daniel": 67})
+Traceback (most recent call last):
+ ...
+TypeError: b must be an integer
+
+
+Check for more than two arguments
+---------------------------------
+>>> add_integer(7, 8, 8)
+Traceback (most recent call last):
+ ...
+TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+
+
+Check for only first argument
+---------------------------
+>>> add_integer(7)
+105
