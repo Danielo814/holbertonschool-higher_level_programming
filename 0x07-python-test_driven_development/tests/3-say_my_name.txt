@@ -1,0 +1,44 @@
+==============================
+tests for 3-say_my_name module
+==============================
+
+
+Check for import say_my_name function from 3-say_my_name module
+---------------------------------------------------------------
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+
+Check for both arguments as strings
+-----------------------------------
+>>> say_my_name("daniel", "ojeda")
+My name is daniel ojeda
+
+
+Check for first argument as an int
+----------------------------------
+>>> say_my_name(7, "ojeda")
+Traceback (most recent call last):
+ ...
+TypeError: first_name must be a string
+
+
+check for second argument as a list
+-----------------------------------
+>>> say_my_name("Nathaniel", ["Cullpepper"])
+Traceback (most recent call last):
+ ...
+TypeError: last_name must be a string
+
+
+Check with one argument
+-----------------------
+>>> say_my_name("Nathaniel")
+My name is Nathaniel 
+
+
+Check with three arguents
+--------------------------
+>>> say_my_name("Nathaniel", "lol", "cullpepper")
+Traceback (most recent call last):
+ ...
+TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
