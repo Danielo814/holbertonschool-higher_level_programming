@@ -1,0 +1,113 @@
+=======================
+2-matrix_divided module
+=======================
+
+Importing matrix divided function from module
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+
+Checks for a matrix of two lists
+-----------------------------------
+>>> matrix = [[1, 3, 4], [7, 8, 6]]
+>>> matrix_divided(matrix, 3)
+[[0.33, 1.0, 1.33], [2.33, 2.67, 2.0]]
+
+
+Checks a matrix of one list
+---------------------------
+>>> matrix = [[7, 3, 4]]
+>>> matrix_divided(matrix, 6)
+[[1.17, 0.5, 0.67]]
+
+
+Checks for a matrix of 3 lists
+-------------------------------
+>>> matrix = [[6, 1, 1], [9, 4, 8], [9, 4, 100]]
+>>> matrix_divided(matrix, 3)
+[[2.0, 0.33, 0.33], [3.0, 1.33, 2.67], [3.0, 1.33, 33.33]]
+
+
+Checking if lists that are within matrix have elements of type int or float
+---------------------------------------------------------------------------
+>>> matrix = [[6, 1, 'h'], [9, (1, 2), 8], [9, 4, 100]]
+>>> matrix_divided(matrix, 3)
+Traceback (most recent call last):
+ ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+
+Check for matrix with list and non-list item
+--------------------------------------------
+>>> matrix = [[6, 1, 1], "Stringystring"]
+>>> matrix_divided(matrix, 3)
+Traceback (most recent call last):
+ ... 
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+
+Check to see if each row of matrix is the same size
+---------------------------------------------------
+>>> matrix = [[6, 1, 1], [9, 4, 8], [9, 4, 100, 3, 1, 2]]
+>>> matrix_divided(matrix, 3)
+Traceback (most recent call last):
+ ...
+TypeError: Each row of the matrix must have the same size
+
+
+Check if div is a string
+----------------------------------------------------
+>>> matrix = [[6, 1, 1], [9, 4, 8], [9, 4, 100]]
+>>> matrix_divided(matrix, 'lol')
+Traceback (most recent call last):
+ ...
+TypeError: div must be a number
+
+
+Check when div is None
+----------------------
+>>> matrix = [[6, 1, 1], [9, 4, 8], [9, 4, 100]]
+>>> matrix_divided(matrix, None)
+Traceback (most recent call last):
+ ...
+TypeError: div must be a number
+
+
+Check when div is 0
+--------------------
+>>> matrix = [[6, 1, 1], [9, 4, 8], [9, 4, 100]]
+>>> matrix_divided(matrix, 0)
+Traceback (most recent call last):
+ ...
+ZeroDivisionError: division by 0
+
+
+Check when div is negative
+-------------------------
+>>> matrix = [[6, 1, 1], [9, 4, 8], [9, 4, 2]]
+>>> matrix_divided(matrix, -2)
+[[-3.0, -0.5, -0.5], [-4.5, -2.0, -4.0], [-4.5, -2.0, -1.0]]
+
+
+Check when div is a float
+-------------------------
+>>> matrix = [[6, 5, 1], [9, 5, 8], [8, 1, 3]]
+>>> matrix_divided(matrix, 2.4)
+[[2.5, 2.08, 0.42], [3.75, 2.08, 3.33], [3.33, 0.42, 1.25]]
+
+
+Check for a list that's not two dimensional
+-------------------------------------------
+>>> matrix = []
+>>> matrix_divided(matrix, 6)
+Traceback (most recent call last):
+ ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+
+Check if matrix is a string
+--------------------------
+>>> matrix = "hey"
+>>> matrix_divided(matrix, 6)
+Traceback (most recent call last):
+ ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
