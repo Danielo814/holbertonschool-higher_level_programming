@@ -1,0 +1,59 @@
+=========================
+5-text_indentation module
+==========================
+
+Check for importing text_indentation function from 5-text_indentation
+---------------------------------------------------------------------
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+
+Test for input as a normal string
+--------------------------------
+>>> text_indentation("Hello my name is daniel. I am testing some input. why am i testing this input? because Holberton told: me to.")
+Hello my name is daniel.
+<BLANKLINE>
+I am testing some input.
+<BLANKLINE>
+why am i testing this input?
+<BLANKLINE>
+because Holberton told:
+<BLANKLINE>
+me to.
+<BLANKLINE>
+
+
+Test input with a string of special characters
+----------------------------------------------
+>>> text_indentation("::.?")
+:
+<BLANKLINE>
+:
+<BLANKLINE>
+.
+<BLANKLINE>
+?
+<BLANKLINE>
+
+
+Test input with first character as a space
+------------------------------------------
+>>> text_indentation(" First character is a space.")
+First character is a space.
+<BLANKLINE>
+
+
+Test input as a list
+--------------------
+>>> text_indentation(["hello. i am"])
+Traceback (most recent call last):
+ ...
+TypeError: text must be a string
+
+
+Test input as a boolean
+-----------------------
+>>> text_indentation(False)
+Traceback (most recent call last):
+ ...
+TypeError: text must be a string
+
