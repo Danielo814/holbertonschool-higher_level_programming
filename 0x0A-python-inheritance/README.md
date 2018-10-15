@@ -12,4 +12,4 @@ In this project I learned:
 * How to override a method or attribute inherited from the base class
 * Which attributes or methods are available by heritage to subclasses
 * What the purpose of inheritance is
-* What are and when to use isinstance, issubclass, type, and super built-ins
+* What are and when to use ```isinstance```, ```issubclass```, ```type```, and ```super``` built-ins
