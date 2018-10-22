@@ -73,3 +73,11 @@ class TestRect(unittest.TestCase):
         i = Rectangle(4, 5, 6, 6)
         i.update(1, 2, 3, 4)
         self.assertEqual(i.width, 2)
+
+    def test_str_method(self):
+        i = Rectangle(4, 5, 34, 55, 7)
+        self.assertEqual(str(i), "[Rectangle] (7) 34/55 - 4/5")
+
+    def test_to_dictionary(self):
+        i = Rectangle(1, 2)
+        self.assertEqual(type(i.to_dictionary()), dict)
