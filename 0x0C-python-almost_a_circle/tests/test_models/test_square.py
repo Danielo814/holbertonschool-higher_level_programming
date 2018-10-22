@@ -28,6 +28,22 @@ class TestSquare(unittest.TestCase):
         with self.assertRaises(ValueError):
             new = Square(-8)
 
+    def string_as_input(self):
+        with self.assertRaises(TypeError):
+            new = Square("Danny")
+
+    def list_as_input(self):
+        with self.assertRaises(TypeError):
+            new = Square([1, 2, 3])
+
+    def tuple_as_input(self):
+        with self.assertRaises(TypeError):
+            new = Square((6, 7))
+
+    def dict_as_input(self):
+        with self.assertRaises(TypeError):
+            new = Square({'size': 30})
+
     def test_x_values(self):
         square1 = Square(2, 3, 4, 78)
         square2 = Square(5, 6, 1, 45)
