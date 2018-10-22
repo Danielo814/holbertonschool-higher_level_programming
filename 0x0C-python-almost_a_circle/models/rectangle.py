@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-rectangle module
+rectangle Module
 """
 from models.base import Base
 
