@@ -12,6 +12,9 @@ class TestSquare(unittest.TestCase):
     """
 
     def test_createsquare(self):
+        """
+        create new square test
+        """
         new = Square(2, 2, id=60)
         self.assertEqual(str(new), '[Square] (60) 2/0 - 2')
 
