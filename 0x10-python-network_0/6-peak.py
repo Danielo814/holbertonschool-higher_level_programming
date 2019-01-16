@@ -11,7 +11,9 @@ def find_peak(list_of_integers):
     for i in range(len(list_of_integers) - 1):
         next_index = i + 1
         if list_of_integers[next_index] >= list_of_integers[i]:
-            retval = list_of_integers[i]
+            if len(list_of_integers) <= 3 \
+               and list_of_integers[next_index] >= list_of_integers[i]:
+                retval = list_of_integers[next_index]
             if i != 0 and next_index != len(list_of_integers) - 1:
                 retval = list_of_integers[next_index]
             else:
