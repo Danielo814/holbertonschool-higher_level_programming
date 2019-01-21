@@ -2,12 +2,11 @@
 """
 sends request to URL, prints X-Request-Id value of header
 """
-from urllib import request
+import requests
 import sys
 
 
 if __name__ == "__main__":
-    value = request.Request(sys.argv[1])
-    with request.urlopen(value) as response:
-        page = response.headers.get('X-Request-Id')
-    print(page)
+    value = requests.get(sys.argv[1])
+    head = value.headers
+    print(head.get('X-Request-Id'))
